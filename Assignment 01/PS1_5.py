@@ -2,6 +2,7 @@
 Dynamic programming
 """
 import copy
+import math
 
 
 def del_specified_value(list, value):
@@ -72,9 +73,9 @@ def Find_expression(value):
     loop = True
     while loop:
         res = compute(ops)
-
         if res == value:
-            print_expression(ops, res)
+            # print_expression(ops, res)
+            cnt += 1
         for i in range(len(ops)):
             if ops[i] != 2:
                 ops[i] += 1
@@ -83,7 +84,33 @@ def Find_expression(value):
                 ops[i] = 0
                 if i == len(ops) - 1:
                     loop = False
+    return cnt
 
 
 if __name__ == "__main__":
-    Find_expression(1)
+    table = []
+    for i in range(1, 101):
+        cnt = Find_expression(i)
+        table.append(cnt)
+    max_temp = 0
+    min_temp = math.inf
+    max = []
+    min = []
+    for index, t in enumerate(table):
+        if t > max_temp:
+            max_temp = t
+            max.clear()
+            max.append(index + 1)
+        elif t == max_temp:
+            max.append(index + 1)
+        if t < min_temp:
+            min_temp = t
+            min.clear()
+            min.append(index + 1)
+        elif t == min_temp:
+            min.append(index + 1)
+    print('Total_solutions: %s' % table)
+    print('max solutions: %s' % max)
+    print('max solutions count: %s' % table[max[0]-1])
+    print('min solutions: %s' % min)
+    print('min solutions count: %s' % table[min[0] - 1])

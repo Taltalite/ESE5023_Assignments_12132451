@@ -65,6 +65,22 @@ def print_expression(ops, res):
         print(op_nums[index + 1], end='')
     print(' = %s' % res)
 
+# def print_expression(ops, res):
+#     op_nums = segment(ops)
+#     ops_cur = del_specified_value(ops, 0)
+#     print('<tr align=\"center\">\n<td>', end='')
+# 
+#     print(op_nums[0], end='')
+#     for index, op in enumerate(ops_cur):
+#         if op == 1:
+#             print(' + ', end='')
+#         elif op == 2:
+#             print(' - ', end='')
+#         print(op_nums[index + 1], end='')
+#     print(' = %s' % res, end='')
+#
+#     print('</td>\n</tr>')
+
 
 def Find_expression(value):
     # ops represents each operator
@@ -74,7 +90,7 @@ def Find_expression(value):
     while loop:
         res = compute(ops)
         if res == value:
-            # print_expression(ops, res)
+            print_expression(ops, res)
             cnt += 1
         for i in range(len(ops)):
             if ops[i] != 2:
@@ -86,6 +102,32 @@ def Find_expression(value):
                     loop = False
     return cnt
 
+# def Find_expression_cnt(value):
+#     # ops represents each operator
+#     ops = [0, 0, 0, 0, 0, 0, 0, 0]
+#     cnt = 0
+#     loop = True
+#     while loop:
+#         res = compute(ops)
+#         if res == value:
+#             # print_expression(ops, res)
+#             cnt += 1
+#         for i in range(len(ops)):
+#             if ops[i] != 2:
+#                 ops[i] += 1
+#                 break
+#             else:
+#                 ops[i] = 0
+#                 if i == len(ops) - 1:
+#                     loop = False
+#     return cnt
+
+
+# if __name__ == "__main__":
+#     for i in range(1, 101):
+#         cnt = Find_expression_cnt(i)
+#         print('<tr align=\"center\">\n<th rowspan=\"%s\">%s</th>\n</tr>' % (cnt+1, i))
+#         Find_expression(i)
 
 if __name__ == "__main__":
     table = []

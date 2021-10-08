@@ -14,4 +14,6 @@ def Least_moves(x):
 
 
 if __name__ == "__main__":
+    print(Least_moves(10))
+    print(Least_moves(50))
     print(Least_moves(99))

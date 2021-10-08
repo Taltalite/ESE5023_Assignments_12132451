@@ -18,3 +18,4 @@ def Pascal_triangle(k):
 
 if __name__ == "__main__":
     Pascal_triangle(100)
+    Pascal_triangle(200)

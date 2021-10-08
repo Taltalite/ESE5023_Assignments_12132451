@@ -21,5 +21,5 @@ if __name__ == "__main__":
     a = random.randint(0, 10000)
     b = random.randint(0, 10000)
     c = random.randint(0, 10000)
-    # print(a, b, c)
+    print(a, b, c)
     Print_values(a, b, c)

@@ -69,7 +69,7 @@ def print_expression(ops, res):
 #     op_nums = segment(ops)
 #     ops_cur = del_specified_value(ops, 0)
 #     print('<tr align=\"center\">\n<td>', end='')
-# 
+#
 #     print(op_nums[0], end='')
 #     for index, op in enumerate(ops_cur):
 #         if op == 1:

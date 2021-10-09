@@ -35,13 +35,13 @@ if __name__ == "__main__":
 
 **输出结果1：**
 
-<p style="text-align:center;"><img src="./report_01.png" width=80% alt="pic 1-1" /></p>
+<p style="text-align:center;"><img src="./img/report_01.png" width=100% alt="pic 1-1" /></p>
 
 可以看到该次实验的 abc 大小关系是 b>c>a ，由于flowchart里没有对应的输出流程所以不输出结果
 
 **输出结果2：**
 
-<p style="text-align:center;"><img src="./report_02.png" width=80% alt="pic 1-2" /></p>
+<p style="text-align:center;"><img src="./img/report_02.png" width=100% alt="pic 1-2" /></p>
 
 可以看到该次实验的 abc 大小关系是 c>a>b ，由于flowchart里有对应的输出流程所以输出了结果
 
@@ -99,7 +99,7 @@ if __name__ == "__main__":
 
 **输出结果：**
 
-<p style="text-align:center;"><img src="./report_03.png" width=100% alt="pic 2-1" /></p>
+<p style="text-align:center;"><img src="./img/report_03.png" width=100% alt="pic 2-1" /></p>
 
 
 
@@ -107,9 +107,13 @@ if __name__ == "__main__":
 
 Pascal triangle 实例：
 
-<p style="text-align:center;"><img src="./report_04.png" width=25% alt="pic 3-1" /></p>
+<p style="text-align:center;"><img src="./img/report_04.png" width=25% alt="pic 3-1" /></p>
 
-根据一定的数学知识可以得到第 k 行的 Pascal triangle 数值排列是 $C_{k-1}^{i} \ (i=0,1,2,...,k-1)$ ，据此可以编程如下：
+根据一定的数学知识可以得到第 k 行的 Pascal triangle 数值排列是
+
+$$C_{k-1}^{i} \ (i=0,1,2,...,k-1)$$
+
+据此可以编程如下：
 
 ```python
 import math
@@ -180,11 +184,23 @@ if __name__ == "__main__":
 9
 ```
 
+验证如下：
+
+1 -> 2 -> 4 -> 5 -> 10
+
+1 -> 2 -> 3 -> 6 -> 12 -> 24 -> 25 -> 50
+
+1 -> 2 -> 3 -> 6 -> 12 -> 24 -> 48 -> 49 -> 98 -> 99
+
 
 
 ## 5. Dynamic programming
 
-本题使用穷举的方法，在数字 123456789 之间可以插入 3 种操作符：连接、+、-，故总共有 $3^8=6561$ 种可能
+本题使用穷举的方法，在数字 123456789 之间可以插入 3 种操作符：连接、+、-，故总共有
+
+$$3^8=6561$$
+
+种可能
 
 由此编写代码如下：
 
@@ -284,7 +300,7 @@ if __name__ == "__main__":
 
 **输出结果：**
 
-<p style="text-align:center;"><img src="./report_05.png" width=80% alt="pic 5-1" /></p>
+<p style="text-align:center;"><img src="./img/report_05.png" width=100% alt="pic 5-1" /></p>
 
 统计目标结果1-100的数据，使用如下代码：
 

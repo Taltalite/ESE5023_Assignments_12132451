@@ -348,7 +348,29 @@ min solutions count: 6
 
 solutions 最少的数字是 88，共有 6 solutions
 
-1-100所有的 solutions 如下表所示：
+将 Total_solutions 绘制成折线图
+
+[matplotlib 参考链接](https://matplotlib.org/stable/gallery/subplots_axes_and_figures/subplot.html#sphx-glr-gallery-subplots-axes-and-figures-subplot-py)
+
+[numpy.linspace() 参考链接](https://numpy.org/doc/stable/reference/generated/numpy.linspace.html)
+
+```python
+def plotTotalSolutions(total_solutions):
+    x = np.linspace(1, 100, num=100, dtype=int)
+    print(x)
+    y = total_solutions
+    print(y)
+    plt.subplot(2, 1, 1)
+    plt.title('Total Solutions')
+    plt.plot(x, y, 'o-')
+    plt.xlabel('target numbers')
+    plt.ylabel('solutions')
+    plt.show()
+```
+
+<p style="text-align:center;"><img src="./img/report_06.png" width=100% alt="pic 5-2" /></p>
+
+1-100 所有的 solutions 如下表所示：
 
 <table>
 <tr align="center">

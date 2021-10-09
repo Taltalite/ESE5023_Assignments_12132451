@@ -3,7 +3,8 @@ Dynamic programming
 """
 import copy
 import math
-
+import numpy as np
+import matplotlib.pyplot as plt
 
 def del_specified_value(list, value):
     list_res = copy.deepcopy(list)
@@ -90,7 +91,7 @@ def Find_expression(value):
     while loop:
         res = compute(ops)
         if res == value:
-            print_expression(ops, res)
+            # print_expression(ops, res)
             cnt += 1
         for i in range(len(ops)):
             if ops[i] != 2:
@@ -129,6 +130,18 @@ def Find_expression(value):
 #         print('<tr align=\"center\">\n<th rowspan=\"%s\">%s</th>\n</tr>' % (cnt+1, i))
 #         Find_expression(i)
 
+def plotTotalSolutions(total_solutions):
+    x = np.linspace(1, 100, num=100, dtype=int)
+    print(x)
+    y = total_solutions
+    print(y)
+    plt.subplot(2, 1, 1)
+    plt.title('Total Solutions')
+    plt.plot(x, y, 'o-')
+    plt.xlabel('target numbers')
+    plt.ylabel('solutions')
+    plt.show()
+
 if __name__ == "__main__":
     table = []
     for i in range(1, 101):
@@ -156,3 +169,4 @@ if __name__ == "__main__":
     print('max solutions count: %s' % table[max[0]-1])
     print('min solutions: %s' % min)
     print('min solutions count: %s' % table[min[0] - 1])
+    plotTotalSolutions(table)

@@ -111,7 +111,7 @@ Pascal triangle 实例：
 
 根据一定的数学知识可以得到第 k 行的 Pascal triangle 数值排列是
 
-$$C_{k-1}^{i} \ (i=0,1,2,...,k-1)$$
+<img src="https://latex.codecogs.com/svg.image?C_{k-1}^{i}&space;\&space;(i=0,1,2,...,k-1)" title="C_{k-1}^{i} \ (i=0,1,2,...,k-1)" />
 
 据此可以编程如下：
 
@@ -198,7 +198,7 @@ if __name__ == "__main__":
 
 本题使用穷举的方法，在数字 123456789 之间可以插入 3 种操作符：连接、+、-，故总共有
 
-$$3^8=6561$$
+<img src="https://latex.codecogs.com/svg.image?3^8=6561" title="3^8=6561" />
 
 种可能
 

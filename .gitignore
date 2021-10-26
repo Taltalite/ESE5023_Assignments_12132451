@@ -4,3 +4,9 @@
 
 .idea
 *.ipynb*
+
+gsoy.csv
+dp_gsoy.csv
+2281305.csv
+earthquakes-2021-10-13_20-48-52_+0800.tsv
+mag_df.csv

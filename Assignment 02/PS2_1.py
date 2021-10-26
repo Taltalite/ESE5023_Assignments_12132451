@@ -1,7 +1,6 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-import datetime
 
 Sig_Eqs = pd.read_csv("./earthquakes-2021-10-13_20-48-52_+0800.tsv", sep="\t")
 Sig_Eqs = Sig_Eqs.drop([0])
@@ -9,12 +8,12 @@ Sig_Eqs = Sig_Eqs.reset_index(drop=True)
 
 Eqs_total_deaths_top10 = Sig_Eqs.groupby(['Country']).sum().sort_values('Deaths', ascending=False).head(10)
 
-# print(Eqs_total_deaths_top10[['Deaths']])
+print(Eqs_total_deaths_top10[['Deaths']])
 
 Sig_Eqs.loc[Sig_Eqs['Mag'] >= 6.0].groupby(['Year']).size().plot(subplots=True)
 
 
-# plt.show()
+plt.show()
 
 def CountEq_LargestEq(country):
     eqs_cnt = Sig_Eqs.loc[Sig_Eqs['Country'] == country].groupby(['Country']).size()

@@ -5,8 +5,13 @@
 .idea
 *.ipynb*
 
+# Assignment 02
 gsoy.csv
 dp_gsoy.csv
 2281305.csv
 earthquakes-2021-10-13_20-48-52_+0800.tsv
 mag_df.csv
+
+#Assignment 03
+NOAA_NCDC_ERSST_v3b_SST.nc
+CERES_EBAF-TOA_200003-201701.nc

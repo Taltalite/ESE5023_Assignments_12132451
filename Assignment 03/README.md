@@ -29,3 +29,10 @@
 
 ## 2. Earth’s energy budget
 
+将 TOA(Top of Atmosphere) 的 shortwave, longwave, solar and net radiation 绘制在一张图中如下所示：
+
+<p style="text-align:center;"><img src="./img/2-1.png" width=100% alt="pic 1-3" /></p>
+
+根据各辐射所表示的意义，计算理论净辐射通量：solar - (shortwave + longwave)，绘制出如下图，可以通过肉眼直观地看出计算值与上图中的TOA net radiation flux 基本一致
+
+<p style="text-align:center;"><img src="./img/2-2.png" width=70% alt="pic 1-3" /></p>

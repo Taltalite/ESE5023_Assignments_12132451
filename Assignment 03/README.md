@@ -127,3 +127,44 @@ high_cld_comps_mean = high_cld_sw_mean + high_cld_lw_mean
 
 1. 云层相比长波辐射，对短波辐射的反射更强
 2. 云层可以自发地发射长波辐射
+
+
+## 3. Explore a netCDF dataset
+
+本次作业使用的数据集是 MERRA-2 数据中的有关一氧化碳和臭氧的诊断数据
+
+[MERRA-2 tavg1_2d_chm_Nx: 2d,1-Hourly,Time-Averaged,Single-Level,Assimilation,Carbon Monoxide and Ozone Diagnostics V5.12.4 (M2T1NXCHM)](https://disc.gsfc.nasa.gov/datasets/M2T1NXCHM_5.12.4/summary?keywords=carbon)
+
+数据集使用 2021-09-01 一天的数据进行分析，下载链接如下：
+
+[MERRA2_400.tavg1_2d_chm_Nx.20210901.nc4](https://goldsmr4.gesdisc.eosdis.nasa.gov/data/MERRA2/M2T1NXCHM.5.12.4/2021/09/MERRA2_400.tavg1_2d_chm_Nx.20210901.nc4)
+
+数据集每项数据的含义通过查阅文档如下：
+
+<p style="text-align:center;"><img src="./img/3-1.png" width=100% alt="pic 3-1" /></p>
+
+<p style="text-align:center;"><img src="./img/3-2.png" width=100% alt="pic 3-2" /></p>
+
+**3.1 [5 points] Plot a time series of a certain variable with monthly seasonal cycle removed.**
+
+画出 2021-09-01 当天赤道线上一氧化碳排放量 (COEM) 的时间序列图：
+
+<p style="text-align:center;"><img src="./img/3-3.png" width=70% alt="pic 3-3" /></p>
+
+**3.2 [5 points] Make at least 5 different plots using the dataset.**
+
+我选择 2021-09-01 该天，并每个时段的一氧化碳柱负荷 (COCL) 绘制出来合并为一个 gif 动图，该段代码在 jupyter notebook 上无法呈现动图效果，因为建议使用 PyCharm 运行，不过我也将结果保存为了一个 gif 格式文件，通过图片查看软件打开也是可以的。
+
+绘图时参考的官方或论坛链接如下：
+
+[Animated image using a precomputed list of images](https://matplotlib.org/stable/gallery/animation/dynamic_image.html)
+
+['QuadContourSet' object has no attribute 'set_visible' or 'set_animated'](https://github.com/matplotlib/matplotlib/issues/6139)
+
+[Animating Contour Plot in Matplotlib with FuncAnimation [duplicate]](https://stackoverflow.com/questions/56369102/animating-contour-plot-in-matplotlib-with-funcanimation)
+
+下图为生成的 gif 动图，PDF格式下为静态图片
+
+<p style="text-align:center;"><img src="./2021-09-01 CO Column Burden Time Series.gif" width=90% alt="pic 3-4" /></p>
+
+

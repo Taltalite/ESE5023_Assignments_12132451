@@ -60,7 +60,7 @@ plt.colorbar(cntr, label='COCL', orientation='vertical', fraction=0.01)
 problem 2-2
 """
 
-fig = plt.figure(figsize=(12, 9), dpi=100)
+fig = plt.figure(figsize=(8, 8), dpi=100)
 
 # Load the border data, CN-border-La.dat is download from
 # https://gmt-china.org/data/CN-border-La.dat
